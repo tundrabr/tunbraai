@@ -1,0 +1,1 @@
+Scaffold created. Next steps: implement API routes for OpenAI/Stripe/PDF.
