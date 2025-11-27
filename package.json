@@ -6,10 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@prisma/client": "latest",
     "ai": "latest",
     "next": "latest",
     "react": "latest",
@@ -22,7 +20,6 @@
     "next-auth": "latest"
   },
   "devDependencies": {
-    "prisma": "latest",
     "typescript": "latest",
     "@types/react": "latest",
     "@types/node": "latest"
