@@ -1,5 +1,5 @@
 {
-  "name": "tundraai",
+  "name": "tunbraai",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -18,7 +18,8 @@
     "zod": "latest",
     "tailwindcss": "latest",
     "postcss": "latest",
-    "autoprefixer": "latest"
+    "autoprefixer": "latest",
+    "next-auth": "latest"
   },
   "devDependencies": {
     "prisma": "latest",
