@@ -1,34 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "lib": [
-      "DOM",
-      "ES2022"
-    ],
-    "jsx": "react-jsx",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./app/*",
-        "./components/*"
-      ]
-    },
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true
-  },
-  "ts-node": {
-    "esm": true
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "jsx": "preserve",
+    "module": "esnext",
+    "target": "es2017",
+    "strict": true
+  }
 }

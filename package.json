@@ -1,35 +1,29 @@
 {
-  "name": "tunbraai",
-  "version": "0.1.0",
+  "name": "tundraai",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test:e2e": "playwright test",
-    "test:unit": "echo \"No unit tests yet\""
+    "postinstall": "prisma generate"
   },
   "dependencies": {
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "next-auth": "^5.0.0",
-    "prisma": "^5.0.0",
-    "@prisma/client": "^5.0.0",
-    "openai": "^4.9.0",
-    "stripe": "^11.0.0",
-    "bcryptjs": "^2.4.3",
-    "@next-auth/prisma-adapter": "^1.0.5",
-    "puppeteer": "^20.0.0"
+    "@prisma/client": "latest",
+    "ai": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "openai": "latest",
+    "zod": "latest",
+    "tailwindcss": "latest",
+    "postcss": "latest",
+    "autoprefixer": "latest"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "tailwindcss": "^3.5.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0",
-    "puppeteer": "^20.0.0",
-    "playwright": "^1.32.0",
-    "@playwright/test": "^1.32.0"
+    "prisma": "latest",
+    "typescript": "latest",
+    "@types/react": "latest",
+    "@types/node": "latest"
   }
 }
