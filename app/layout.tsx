@@ -2,10 +2,14 @@ import "./globals.css";
 
 export const metadata = {
   title: "TundraAI",
-  description: "Mini negócios automáticos."
+  description: "Mini negócios automáticos.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-BR">
       <body className="bg-slate-950 text-slate-50">
