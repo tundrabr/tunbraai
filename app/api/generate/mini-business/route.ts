@@ -1,21 +1,18 @@
-import { NextResponse } from "next/server";
-import { generateMiniBusinessWithAI } from "@/lib/ai";
-import { prisma } from "@/lib/prisma";
+// app/api/generate/mini-business/route.ts
+import { NextResponse } from 'next/server'
+import { generateMiniBusinessWithAI } from '@/lib/ai'
 
-export async function POST(req) {
-  const body = await req.json();
-  const ideia = body.ideia;
+export async function POST(req: Request) {
+  try {
+    const { idea } = await req.json()
+    const result = await generateMiniBusinessWithAI(idea ?? '')
 
-  const ai = await generateMiniBusinessWithAI({ ideia });
-
-  const saved = await prisma.miniBusiness.create({
-    data: {
-      userId: "demo",
-      idea: ideia,
-      title: ai.nome_do_negocio,
-      summary: ai.descricao_resumida,
-    }
-  });
-
-  return NextResponse.json({ miniBusiness: saved });
+    return NextResponse.json(result)
+  } catch (err) {
+    console.error(err)
+    return NextResponse.json(
+      { error: 'Erro ao gerar mini-negócio' },
+      { status: 500 }
+    )
+  }
 }
