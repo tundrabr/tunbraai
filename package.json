@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "latest",
     "ai": "latest",
     "next": "latest",
     "react": "latest",
@@ -16,12 +18,11 @@
     "zod": "latest",
     "tailwindcss": "latest",
     "postcss": "latest",
-    "autoprefixer": "latest",
-    "next-auth": "latest"
+    "autoprefixer": "latest"
   },
   "devDependencies": {
+    "prisma": "latest",
     "typescript": "latest",
-    "@types/react": "latest",
-    "@types/node": "latest"
+    "@types/react": "latest"
   }
 }
