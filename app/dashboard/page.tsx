@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Dashboard() {
   const [ideia, setIdeia] = useState("");
   const [result, setResult] = useState(null);
 
-  async function gerar(e) {
+ async function gerar(e: React.FormEvent) {
     e.preventDefault();
     const r = await fetch("/api/generate/mini-business", {
       method: "POST",
